@@ -8,7 +8,7 @@ const weatherdata = require('./utilis/weather')
 //console.log(__filename)
 
 const app = express()
-
+const port = process.env.PORT || 3000
 const filepath1 = path.join(__dirname, '../public')
 
 const viewpath = path.join(__dirname, '../temp/views')
@@ -71,7 +71,7 @@ app.get('/weather', (req, res) => {
                 res.send({
                         title: 'Weather',
                         name: 'Jay',
-                        addrhess: place,
+                        address: place,
                         mssg : 'It is '+ weatherdata+' temperature in '+place,
                         
                     })
@@ -93,6 +93,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('Server is set up!')
+app.listen(port, () => {
+    console.log('Server is set up! on '+port)
 })

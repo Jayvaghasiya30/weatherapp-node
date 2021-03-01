@@ -5,6 +5,7 @@ const search = document.querySelector('input')
 const msg1 = document.querySelector('#msg-1')
 const msg2 = document.querySelector('#msg-2')
 console.log("client side js file")
+console.log("git version cont checking")
 
 msg1.textContent = 'Your city is..'
 weatherform.addEventListener('submit',(e)=>{
